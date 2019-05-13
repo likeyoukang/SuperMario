@@ -23,9 +23,13 @@ public class UserDaoTest extends GenericDaoTestCase<Long, User, UserDao> {
 	public void testFindAll() {
 
 		List<User> result = this.userDao.findAll();
-		if (logger.isInfoEnabled()) {
-			logger.info("testFindAll() - List<User> result={}", result); //$NON-NLS-1$
+		for (User user : result) {
+			System.out.println(user.getPassword());
+			
 		}
+//		if (logger.isInfoEnabled()) {
+//			logger.info("testFindAll() - List<User> result={}", result); //$NON-NLS-1$
+//		}
 
 	}
 

@@ -11,6 +11,11 @@ import edu.zut.hb.software.base.domain.BaseEntity;
 @Entity
 public class Student extends BaseEntity  {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@ManyToOne
 	@JoinColumn(name = "GROUP_ID")
 	Group group;
